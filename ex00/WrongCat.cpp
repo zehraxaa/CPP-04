@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/08 12:41:42 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/08 14:57:27 by aaydogdu         ###   ########.fr       */
+/*   Created: 2026/02/08 14:31:07 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/02/08 14:59:25 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat(void)
+WrongCat::WrongCat(void)
 {
-	std::cout<<"Cat default constructor called"<<std::endl;
-	this->type = "Cat";
+	std::cout<<"WrongCat default constructor called"<<std::endl;
+	this->type = "WrongCat";
 }
 
-Cat::Cat(const Cat &other)
+WrongCat::WrongCat(const WrongCat &other)
 {
-	std::cout<<"Cat copy constructor called"<<std::endl;
+	std::cout<<"WrongCat copy constructor called"<<std::endl;
 	this->type = other.type;
 }
 
-Cat& Cat::operator=(const Cat &other)
+WrongCat& WrongCat::operator=(const WrongCat &other)
 {
 	if (this != &other)
 	{
@@ -33,12 +33,12 @@ Cat& Cat::operator=(const Cat &other)
 	return *this;
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-	std::cout<<"Cat destructor called"<<std::endl;
+	std::cout<<"WrongCat destructor called"<<std::endl;
 }
 
-void Cat::makeSound() const
+void WrongCat::makeSound() const
 {
 	std::cout<<"Meow meow!!!"<<std::endl;
 }

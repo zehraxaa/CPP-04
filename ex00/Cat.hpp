@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 12:41:03 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/08 12:41:25 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/08 14:58:20 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,11 @@ class Cat : public Animal
 {
 	public:
 		Cat(void);
-		Cat(std::string type);
 		Cat(const Cat &other);
 		Cat& operator=(const Cat &other);
 		~Cat();
 
-		void makeSound();
+		void makeSound() const;
 };
 
 #endif
