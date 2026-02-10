@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 12:41:03 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/08 15:59:18 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/10 23:43:41 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ class Cat : public Animal
 		~Cat();
 
 		void makeSound() const;
+		Brain* getIdeaAddress();
+		const Brain* getIdeaAddress() const;
+		std::string &getIdea(int index);
+		const std::string &getIdea(int index) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 12:36:34 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/08 15:59:12 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/10 23:42:56 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,12 @@ class Dog : public Animal
 		Dog(const Dog &other);
 		Dog& operator=(const Dog &other);
 		~Dog();
-
+		
 		void makeSound() const;
+		Brain*       getIdeaAddress();              // non-const Dog için
+		const Brain* getIdeaAddress() const;        // const Dog için
+		std::string &getIdea(int index);           // fikri okumak/değiştirmek için
+		const std::string &getIdea(int index) const; // sadece fikri okumak için
 };
 
 #endif

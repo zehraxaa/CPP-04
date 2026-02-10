@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 12:19:01 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/08 14:58:05 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/10 00:37:43 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal
 		Animal& operator=(const Animal &other);
 		virtual ~Animal();
 		
-		std::string getType() const;;
+		std::string getType() const;
 		virtual void makeSound() const;
 };
 
