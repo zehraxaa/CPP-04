@@ -6,26 +6,26 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 12:39:51 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/10 23:43:09 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/11 13:30:50 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) // a
+Dog::Dog(void)
 {
 	std::cout<<"Dog default constructor called"<<std::endl;
 	this->type = "Dog";
 	this->idea = new Brain();
 }
 
-Dog::Dog(const Dog &other) : Animal(other) // b (a)
+Dog::Dog(const Dog &other) : Animal(other)
 {
 	std::cout<<"Dog copy constructor called"<<std::endl;
 	this->idea = new Brain(*other.idea);
 }
 
-Dog& Dog::operator=(const Dog &other) // c = b
+Dog& Dog::operator=(const Dog &other)
 {
 	std::cout<<"Dog copy asignment operator called"<<std::endl;
 	if (this != &other)

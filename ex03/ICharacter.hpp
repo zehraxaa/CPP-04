@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/08 12:21:33 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/11 13:27:05 by aaydogdu         ###   ########.fr       */
+/*   Created: 2026/02/11 14:06:33 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/02/11 14:06:34 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
-int main()
+#include <iostream>
+
+class AMateria;
+
+class ICharacter
 {
-	//const Animal* meta = new Animal();
-	//Animal test;
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+public:
+    virtual ~ICharacter() {}
+    virtual std::string const & getName() const = 0;
+    virtual void equip(AMateria* m) = 0;
+    virtual void unequip(int idx) = 0;
+    virtual void use(int idx, ICharacter& target) = 0;
+};
 
-	j->makeSound();
-	i->makeSound();
-
-	delete j;
-	delete i;
-	
-	return 0;
-}
+#endif
