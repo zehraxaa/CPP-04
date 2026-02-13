@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/12 22:46:11 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/02/13 00:27:04 by aaydogdu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Ice.hpp"
+
+Ice::Ice() : AMateria("ice")
+{
+    std::cout<<"Ice default constructor called"<<std::endl;
+}
+
+Ice::Ice(const Ice &other) : AMateria(other)
+{
+    std::cout<<"Ice copy constructor called"<<std::endl;
+    this->type = other.type;
+}
+
+Ice& Ice::operator=(const Ice &other)
+{
+    std::cout<<"Ice copy assignment operator called"<<std::endl;
+    if (this != &other)
+        AMateria::operator=(other);
+    return *this;
+}
+
+Ice::~Ice()
+{
+    std::cout<<"Ice destructor called"<<std::endl;
+}
+
+AMateria* Ice::clone() const
+{
+    return new Ice(*this);
+}
+
+void Ice::use(ICharacter& target)
+{
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+}

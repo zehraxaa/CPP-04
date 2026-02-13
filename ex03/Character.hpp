@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:13:57 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/11 15:17:55 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:17:18 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,6 @@ class Character : public ICharacter
         virtual void equip(AMateria* m);
         virtual void unequip(int idx);
         virtual void use(int idx, ICharacter& target);
-}
+};
+
+#endif

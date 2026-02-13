@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 12:21:33 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/08 14:48:46 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:11:56 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ std::cout<<std::endl;
 std::cout<<std::endl;
 
 const WrongAnimal* wct = new WrongCat();
-std::cout<<wct->getType()<<std::endl;
+std::cout<<wct->WrongAnimal::getType()<<std::endl;
 wct->makeSound();
 
 delete wct;

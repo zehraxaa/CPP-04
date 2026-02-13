@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Character.hpp                                      :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:06:33 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/11 14:06:34 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/12 22:49:29 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHARACTER_HPP
-# define CHARACTER_HPP
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
 #include <iostream>
+#include <string>
 
 class AMateria;
 

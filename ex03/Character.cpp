@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:13:35 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/11 16:11:33 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:31:19 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,21 @@
 
 Character::Character() : name("Default")
 {
-    // std::cout << "Character default constructor called" << std::endl;
+    std::cout << "Character default constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
         this->inventory[i] = NULL;
 }
 
-// Parametreli Constructor (Subject isteği)
 Character::Character(std::string const & name) : name(name)
 {
-    // std::cout << "Character parameterized constructor called" << std::endl;
+    std::cout << "Character parameterized constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
         this->inventory[i] = NULL;
 }
 
-// Copy Constructor
 Character::Character(const Character &other) : name(other.name)
 {
-    // std::cout << "Character copy constructor called" << std::endl;
+    std::cout << "Character copy constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
     {
         if (other.inventory[i])
@@ -40,10 +38,9 @@ Character::Character(const Character &other) : name(other.name)
     }
 }
 
-// Assignment Operator
 Character& Character::operator=(const Character &other)
 {
-    // std::cout << "Character assignment operator called" << std::endl;
+    std::cout << "Character assignment operator called" << std::endl;
     if (this != &other)
     {
         this->name = other.name;
@@ -67,10 +64,10 @@ Character& Character::operator=(const Character &other)
     return *this;
 }
 
-// Destructor
+
 Character::~Character()
 {
-    // std::cout << "Character destructor called" << std::endl;
+    std::cout << "Character destructor called" << std::endl;
     for (int i = 0; i < 4; i++)
     {
         if (this->inventory[i])

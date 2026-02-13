@@ -6,11 +6,12 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 14:31:07 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/09 23:19:03 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:13:12 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
+#include "WrongAnimal.hpp"
 
 WrongCat::WrongCat(void)
 {
@@ -18,7 +19,7 @@ WrongCat::WrongCat(void)
 	this->type = "WrongCat";
 }
 
-WrongCat::WrongCat(const WrongCat &other)
+WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 {
 	std::cout<<"WrongCat copy constructor called"<<std::endl;
 	this->type = other.type;

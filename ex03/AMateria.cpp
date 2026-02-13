@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 13:46:05 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/11 13:52:00 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:20:17 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ AMateria& AMateria::operator=(const AMateria &other)
 
 AMateria::AMateria(std::string const & type)
 {
+	std::cout<<"AMateria parameterized constructor called"<<std::endl;
 	this->type = type;
 }
 

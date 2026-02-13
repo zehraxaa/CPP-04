@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 12:25:09 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/11 00:56:25 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:23:23 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,3 @@ std::string Animal::getType() const
 {
 	return this->type;
 }
-
-
