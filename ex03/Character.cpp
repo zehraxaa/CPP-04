@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:13:35 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/13 00:31:19 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/14 01:06:01 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,13 +82,14 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-    if (!m) return;
+    if (!m)
+        return;
     for (int i = 0; i < 4; i++)
     {
         if (this->inventory[i] == NULL)
         {
             this->inventory[i] = m;
-            // std::cout << "Equipped " << m->getType() << " to slot " << i << std::endl;
+                std::cout << "Equipped " << m->getType() << " to slot " << i << std::endl;
             return;
         }
     }
@@ -100,7 +101,7 @@ void Character::unequip(int idx)
     if (idx >= 0 && idx < 4)
     {
         this->inventory[idx] = NULL; // Sadece pointer'ı düşür, silme!
-        // std::cout << "Unequipped slot " << idx << std::endl;
+            std::cout << "Unequipped slot " << idx << std::endl;
     }
 }
 

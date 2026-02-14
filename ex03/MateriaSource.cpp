@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:14:04 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/13 00:29:20 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/14 00:44:22 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,14 @@ MateriaSource::~MateriaSource()
 
 void MateriaSource::learnMateria(AMateria* m)
 {
-    if (!m) return;
+    if (!m)
+        return;
     for (int i = 0; i < 4; i++)
     {
         if (this->templates[i] == NULL)
         {
-            this->templates[i] = m; // Şablonu kaydet
+            this->templates[i] = m; // Şablonu kaydet. static kısmı yani pointer adresi olan yeri tutuyor.
+            //nesnenin kendisini tutmuyor yani. işaretçi. aşağıda clone yapınca nesne koyuyor yerine
             return;
         }
     }
@@ -83,8 +85,8 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     {
         if (this->templates[i] && this->templates[i]->getType() == type)
         {
-            return this->templates[i]->clone(); // Kopyasını üretip ver
+            return this->templates[i]->clone();
         }
     }
-    return 0; // Bulamazsa 0 (NULL) döndür
+    return 0;
 }
