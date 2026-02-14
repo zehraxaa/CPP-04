@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:14:04 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/14 00:44:22 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/15 00:58:26 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,8 @@ void MateriaSource::learnMateria(AMateria* m)
             return;
         }
     }
-    // Yer yoksa gelen materia silinmeli mi? Genelde hayır, çağıranın sorumluluğunda.
-    // Ama burada pointer'ı saklayamadığımız için memory leak olmaması adına main'de dikkat edilmeli.
+    //burda da bir slot var sonuçta. dolduysa leak yappmasın diye bunları da açığa alıyouez
+    this->trash.dropMateria(m);
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)

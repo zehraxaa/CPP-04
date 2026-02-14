@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:13:57 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/13 00:17:18 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/14 23:58:02 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
+#include "Floor.hpp"
 
 class Character : public ICharacter
 {
     private:
         std::string name;
         AMateria* inventory[4];
-
+        
+        Floor floor;
     public:
         Character();
         Character(std::string const & name);

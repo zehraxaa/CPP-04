@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:23:32 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/14 01:06:01 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/15 00:57:21 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 int main()
 {
     IMateriaSource* src = new MateriaSource();
-    std::cout<<"jdkfjdkfdkfj"<<std::endl;
     src->learnMateria(new Ice()); //0.indexte
     src->learnMateria(new Cure()); //1.indexte bu büyü pointerı var
+    src->learnMateria(new Ice()); //0.indexte
+    src->learnMateria(new Cure());
+    src->learnMateria(new Ice()); //0.indexte
+    src->learnMateria(new Cure());
     
     ICharacter* me = new Character("me");
     AMateria* tmp;

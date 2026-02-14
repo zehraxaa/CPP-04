@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:14:07 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/11 16:12:17 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/15 00:02:43 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 # define MATERIASOURCE_HPP
 
 #include "IMateriaSource.hpp"
+#include "Floor.hpp"
 
 class MateriaSource : public IMateriaSource
 {
     private:
         AMateria* templates[4]; // Öğrenilen büyü şablonları
-
+        Floor trash;
     public:
         MateriaSource();
         MateriaSource(const MateriaSource &other);

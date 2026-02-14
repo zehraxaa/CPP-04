@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:13:35 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/14 01:06:01 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/15 00:01:37 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Character::Character(const Character &other) : name(other.name)
     for (int i = 0; i < 4; i++)
     {
         if (other.inventory[i])
-            this->inventory[i] = other.inventory[i]->clone(); // Deep Copy
+            this->inventory[i] = other.inventory[i]->clone();
         else
             this->inventory[i] = NULL;
     }
@@ -45,14 +45,11 @@ Character& Character::operator=(const Character &other)
     {
         this->name = other.name;
         
-        // 1. Mevcut eşyaları sil (Memory Leak önlemi)
         for (int i = 0; i < 4; i++)
         {
             if (this->inventory[i])
                 delete this->inventory[i];
         }
-
-        // 2. Yeni eşyaları kopyala (Deep Copy)
         for (int i = 0; i < 4; i++)
         {
             if (other.inventory[i])
@@ -93,14 +90,15 @@ void Character::equip(AMateria* m)
             return;
         }
     }
-    // Envanter doluysa eşya takılamaz (burada silmiyoruz, çağıranın sorumluluğunda)
+    this->floor.dropMateria(m);
 }
 
 void Character::unequip(int idx)
 {
     if (idx >= 0 && idx < 4)
     {
-        this->inventory[idx] = NULL; // Sadece pointer'ı düşür, silme!
+        this->floor.dropMateria(this->inventory[idx]);
+        this->inventory[idx] = NULL;
             std::cout << "Unequipped slot " << idx << std::endl;
     }
 }
