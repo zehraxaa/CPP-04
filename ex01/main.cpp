@@ -15,7 +15,7 @@
 
 int main()
 {
-	std::cout<<"Test 1 --- Creating 100 Animal Objects ---"<<std::endl<<std::endl;
+	std::cout<<std::endl<<"Test 1 --- Creating 100 Animal Objects ---"<<std::endl<<std::endl;
 
 	Animal* animals[100];
 	
@@ -29,7 +29,10 @@ int main()
 
 	std::cout<<std::endl<<"Sounds of animal objects:"<<std::endl;
 	for (int i=0; i<100; i++)
+	{
+		std::cout<<"I am a "<<animals[i]->getType()<<" and I ";
 		animals[i]->makeSound();
+	}
 	
 	std::cout<<std::endl<<"Deleting animal objects:"<<std::endl;
 	for (int i=0; i<100; i++)

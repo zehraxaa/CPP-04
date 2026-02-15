@@ -28,10 +28,10 @@ class Dog : public Animal
 		~Dog();
 		
 		void makeSound() const;
-		Brain*       getIdeaAddress();              // non-const Dog için
-		const Brain* getIdeaAddress() const;        // const Dog için
-		std::string &getIdea(int index);           // fikri okumak/değiştirmek için
-		const std::string &getIdea(int index) const; // sadece fikri okumak için
+		Brain*       getIdeaAddress();
+		const Brain* getIdeaAddress() const;
+		std::string &getIdea(int index);
+		const std::string &getIdea(int index) const;
 };
 
 #endif

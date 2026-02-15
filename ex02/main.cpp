@@ -21,8 +21,7 @@ int main()
     // Animal* test2 = new Animal();
 
     std::cout << "--- Test 2: Polymorphism Check ---" << std::endl;
-    
-    // Nesne oluşturamasak da pointer olarak kullanabiliriz.
+   
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
