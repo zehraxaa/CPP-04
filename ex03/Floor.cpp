@@ -28,7 +28,6 @@ Floor& Floor::operator=(const Floor &other)
 {
     if (this != &other)
     {
-        // 1. Mevcut yerdekileri temizle
         Node* current = this->head;
         while (current)
         {
@@ -39,7 +38,6 @@ Floor& Floor::operator=(const Floor &other)
         }
         this->head = NULL;
 
-        // 2. Diğerinin yerdekilerini kopyala
         current = other.head;
         while (current)
         {
@@ -56,13 +54,12 @@ Floor::~Floor()
     while (current)
     {
         Node* next = current->next;
-        delete current->m; // Materyali sil
-        delete current;    // Düğümü sil
+        delete current->m;
+        delete current;
         current = next;
     }
 }
 
-// Eşyayı listeye ekleme
 void Floor::dropMateria(AMateria* m)
 {
     if (!m) return;

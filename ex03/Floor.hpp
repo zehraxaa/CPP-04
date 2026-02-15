@@ -18,12 +18,11 @@
 class Floor
 {
     private:
-        // Bağlı liste (Linked List) düğümü
         struct Node {
             AMateria* m;
             Node* next;
         };
-        Node* head; // Listenin başlangıcı
+        Node* head;
 
     public:
         Floor();
@@ -31,7 +30,7 @@ class Floor
         Floor& operator=(const Floor &other);
         ~Floor();
 
-        void dropMateria(AMateria* m); // Eşyayı yere at (Listeye ekle)
+        void dropMateria(AMateria* m);
 };
 
 #endif

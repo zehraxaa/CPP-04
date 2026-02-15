@@ -70,12 +70,10 @@ void MateriaSource::learnMateria(AMateria* m)
     {
         if (this->templates[i] == NULL)
         {
-            this->templates[i] = m; // Şablonu kaydet. static kısmı yani pointer adresi olan yeri tutuyor.
-            //nesnenin kendisini tutmuyor yani. işaretçi. aşağıda clone yapınca nesne koyuyor yerine
+            this->templates[i] = m;
             return;
         }
     }
-    //burda da bir slot var sonuçta. dolduysa leak yappmasın diye bunları da açığa alıyouez
     this->trash.dropMateria(m);
 }
 

@@ -19,7 +19,7 @@
 class MateriaSource : public IMateriaSource
 {
     private:
-        AMateria* templates[4]; // Öğrenilen büyü şablonları
+        AMateria* templates[4];
         Floor trash;
     public:
         MateriaSource();
