@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:23:32 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/15 14:54:42 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/15 12:23:19 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 int main()
 {
     IMateriaSource* src = new MateriaSource();
-    std::cout<<std::endl<<std::endl;
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
     src->learnMateria(new Ice());

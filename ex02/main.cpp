@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 12:21:33 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/02/15 14:36:29 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/02/16 12:25:40 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int main()
 {
     std::cout << "--- Test 1: Abstract Class Check ---" << std::endl;
     
-    //Animal test;
-    //Animal* test2 = new Animal();
+    // Animal test;
+    // Animal* test2 = new Animal();
 
     std::cout << "--- Test 2: Polymorphism Check ---" << std::endl;
    
@@ -27,8 +27,9 @@ int main()
 
 	j->makeSound();
 	i->makeSound();
-	
-    delete i;
+
     delete j;
+    delete i;
+	
 	return 0;
 }
